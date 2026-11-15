@@ -20,21 +20,18 @@ Pages live beneath `/natural-storefront/`. For example: `product.html?lang=en&id
 
 ## Deploy to GitHub Pages
 
-Deployment is prepared but has NOT been performed. GitHub CLI authentication succeeds for `Ahmedalla1144`, but the actual repository creation attempt was denied with `GraphQL: Resource not accessible by integration (createRepository)`. No `Ahmedalla1144/natural-storefront` repository existed. No unrelated repository was modified. The completed project has a local Git commit.
+Repository: https://github.com/Ahmedalla1144/natural-storefront
 
-Required action: create a public `Ahmedalla1144/natural-storefront` repository at https://github.com/new and grant the connected GitHub app access with Contents, Workflows, Actions and Pages write permissions. Alternatively supply CLI authentication that permits repository creation and those operations. Then, from this project directory:
+GitHub Pages: https://ahmedalla1144.github.io/natural-storefront/
+
+Pages is configured to use GitHub Actions. Pushing to `main` or manually running the deployment workflow installs from the lockfile, tests, builds, uploads **dist/** and deploys with official Pages actions. The workflow deployment environment reports the published URL.
 
 ```sh
-# Once the repository has been created and app access granted:
-git remote add origin https://github.com/Ahmedalla1144/natural-storefront.git
-gh auth setup-git
-# Enable GitHub Actions as the Pages build source before the first push.
-gh api --method POST repos/Ahmedalla1144/natural-storefront/pages -f build_type=workflow
-git push -u origin main
+git push origin main
 gh run list --repo Ahmedalla1144/natural-storefront
 ```
 
-If the repository already exists, set `origin` to its clone URL instead. If Pages already exists, use `gh api --method PUT .../pages -f build_type=workflow`. Alternatively choose **Settings → Pages → Build and deployment → Source: GitHub Actions**. The workflow installs from the lockfile, tests, builds, uploads **dist/** and deploys with official Pages actions. Check the successful deployment's `page_url` for the actual live URL. The expected project URL is `https://ahmedalla1144.github.io/natural-storefront/`; this is not a verified deployment.
+For another repository, update Vite's `base` to match its name and select **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
 ## Architecture and replacement points
 
