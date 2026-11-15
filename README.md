@@ -20,14 +20,14 @@ Pages live beneath `/natural-storefront/`. For example: `product.html?lang=en&id
 
 ## Deploy to GitHub Pages
 
-Deployment is prepared but has NOT been performed. The provided CLI token was invalid, no `Ahmedalla1144/natural-storefront` repository existed, and the connected GitHub tools cannot create repositories or configure Pages. No unrelated repository was modified.
+Deployment is prepared but has NOT been performed. GitHub CLI authentication succeeds for `Ahmedalla1144`, but the actual repository creation attempt was denied with `GraphQL: Resource not accessible by integration (createRepository)`. No `Ahmedalla1144/natural-storefront` repository existed. No unrelated repository was modified. The completed project has a local Git commit.
 
-After authenticating the CLI as the intended owner, with repository creation/write, workflow and Pages administration access:
+Required action: create a public `Ahmedalla1144/natural-storefront` repository at https://github.com/new and grant the connected GitHub app access with Contents, Workflows, Actions and Pages write permissions. Alternatively supply CLI authentication that permits repository creation and those operations. Then, from this project directory:
 
 ```sh
-gh auth login
-# Run from this project directory. Creates a public prototype repository.
-gh repo create Ahmedalla1144/natural-storefront --public --source=. --remote=origin
+# Once the repository has been created and app access granted:
+git remote add origin https://github.com/Ahmedalla1144/natural-storefront.git
+gh auth setup-git
 # Enable GitHub Actions as the Pages build source before the first push.
 gh api --method POST repos/Ahmedalla1144/natural-storefront/pages -f build_type=workflow
 git push -u origin main
