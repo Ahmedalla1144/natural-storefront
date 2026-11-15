@@ -22,3 +22,5 @@ footer{padding:30px 6% 22px;background:#213e30;color:#fff;text-align:center}.foo
 
 .order-summary>.button{margin-top:22px}
 @media(max-width:640px){.product-details{background:transparent;padding:7px 2px 0}.add-row .quantity{width:100%}.confirmation-note{background:var(--surface);border-radius:18px;padding:22px;margin-top:26px}}
+
+[dir=rtl] .section-title{justify-content:flex-start;text-align:start}
