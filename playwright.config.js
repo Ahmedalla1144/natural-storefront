@@ -1,0 +1,2 @@
+import {defineConfig} from '@playwright/test';
+export default defineConfig({testDir:'./tests/browser',fullyParallel:true,workers:2,use:{baseURL:'http://127.0.0.1:4173/natural-storefront/',launchOptions:{args:['--no-sandbox']}},webServer:{command:'npm run preview -- --port 4173',port:4173,reuseExistingServer:true},projects:['en','ar'].flatMap(lang=>['light','dark'].flatMap(colorScheme=>[390,1440].map(width=>({name:`${lang}-${colorScheme}-${width}`,use:{viewport:{width,height:950},colorScheme,locale:lang}}))))});

@@ -1,0 +1,2 @@
+export const leaf='<svg width="32" height="36" viewBox="0 0 32 36" fill="none" aria-hidden="true"><path d="M5 33C10 22 16 13 27 4M15 23C2 24 1 13 3 9c9 0 15 5 12 14ZM20 16C17 6 22 2 30 1c1 9-2 15-10 15Z" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+export const arrow='<svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14" stroke="currentColor" stroke-width="1.5"/></svg>';
