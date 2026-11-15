@@ -43,7 +43,7 @@ For another repository, update Vite's `base` to match its name and select **Sett
 - `src/style.css`: responsive design, automatic OS dark palette and Tailwind CSS 4 import.
 - `public/images/`: locally served, optimized temporary photographs. Gallery view two is an enlarged detail of the same source, pending seller photography.
 
-The demo preserves the requested cream/olive direction. **Figma visual fidelity is not verified:** Figma MCP returned a Starter-plan rate-limit error before any screen could be inspected, and there were no supplied screenshots. The file itself was not edited.
+The visual system is transcribed from the supplied “Natural Pantry - Arabic Mini Store / Client Review v1” PNG exports: warm cream background, forest-green controls, rounded white cards, a split hero, featured products, and matching product/checkout panels. Desktop and mobile exports for both languages were used without any Figma API calls. Package-size controls, catalog prices, the cart flow and automatic OS dark mode are retained. The implementation adapts the exported layouts for accessible controls and intermediate screen sizes.
 
 ## Privacy and accessibility
 
@@ -53,12 +53,7 @@ Native `<dialog>` supplies keyboard focus containment, Escape dismissal and focu
 
 ## Image credits and rights
 
-Photographs are representative and do not establish cultivar, packaging or origin. Image files were resized/compressed; CSS crops them for display. Wikimedia image derivatives remain under their respective share-alike licenses. Credits and links are also visible in the storefront footer.
-
-- Olive oil: https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5 — [Unsplash License](https://unsplash.com/license).
-- Dates: Shaharbano, [Mazafati-Dates.jpg](https://commons.wikimedia.org/wiki/File:Mazafati-Dates.jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). Representative dates photo, not a claim that the pictured cultivar is Ajwa.
-- Sage: Andrew Smith, [Sage Leaves (4135067049).jpg](https://commons.wikimedia.org/wiki/File:Sage_Leaves_(4135067049).jpg), [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/).
-- Pickles: Raimond Spekking, [Mixed Pickles (9370-72).jpg](https://commons.wikimedia.org/wiki/File:Mixed_Pickles_(9370-72).jpg), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+The five illustrative photographs were supplied with the exported design as `Generated Image.png` and `Generated Image-1.png` through `Generated Image-4.png`. They replace the earlier placeholder photos. JPEGs are resized to 1000 pixels wide and compressed for delivery; CSS crops them for their placements. No photograph establishes an actual cultivar, packaging, ingredient or origin. Final seller assets and details can replace them before launch.
 
 ## Verification
 
